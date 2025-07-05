@@ -1,0 +1,841 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: 'superMilk';
+    src: url('../fonts/superMilk.ttf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+html{
+    min-height: 100vh;
+}
+
+body {
+    background-image: url("../images/ur.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -2;
+    margin: 0;
+}
+
+
+
+h1{
+    font-size: 200px;
+}
+
+#fejlec {
+    font-family: superMilk, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    z-index: 1;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#kosarCim{
+    font-family: superMilk, sans-serif;
+}
+
+#termek_tablazat{
+    z-index: 1;
+    position: relative;
+    margin-top: 3.5cm;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#termek_adatai{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.termek_adatok{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-block-end: 20px;
+    margin-block-start: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.kosar_termek_adatok{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-block-end: 20px;
+    margin-block-start: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+p{
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+.termekek{
+    border: 2px solid rgba(141, 141, 141, 0.4);
+    border-radius: 25px;
+    background-color: rgba(30, 30, 30, 0.6);
+    color: white;
+    margin-top: 2cm;
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+.adatok{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+//kosarnal
+.kosar_adatok {
+    text-align: center;
+}
+
+#kosar_tartalom{
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#kosar_termekek{
+    width: 70%;
+}
+
+#kosar_vasarlas{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin-top: 2cm;
+    background-color: rgba(30,30,30,.6);
+    border: 2px solid hsla(0,0%,55%,.4);
+    border-radius: 25px;
+}
+.termekek-kosar{
+    background-color: rgba(30,30,30,.6);
+    border: 2px solid hsla(0,0%,55%,.4);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 2cm;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.termek_megjelenites{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.fooldal_termek_megjelenites{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 45vh;
+}
+
+#termek_kep_lehetosegek_megjel{
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+#meretek{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.meretek_gomb{
+    animation: fejlecAtmenet 10s infinite alternate;
+    background: none;
+    border: none;
+}
+
+#fokep{
+    z-index: 0;
+}
+#lathato{
+    z-index: 1;
+}
+#lathatatlan{
+    z-index: -1;
+}
+
+.termek_kep{
+    border-radius: 25px;
+    border: 3px solid rgba(141, 141, 141, 0.4);
+    height: 70%;
+    width: 70%;
+}
+
+.fooldal_termek_kep{
+    border-radius: 25px;
+    border: 3px solid rgba(141, 141, 141, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+.termek_kep_opciok{
+    margin-top: 20px;
+    border-radius: 25px;
+    border: 3px solid rgba(141, 141, 141, 0.4);
+}
+
+#logo{
+    width: 70px;
+    margin: 5px;
+}
+
+#fejlec_cim{
+    animation: fejlecAtmenet 10s infinite alternate;
+    font-size: 60px;
+    padding-top: 15px;
+    text-decoration: none;
+}
+
+.leiras{
+    word-break: break-word;
+    text-align: center;
+}
+
+@keyframes csikAtmenet {
+    0%,50%,100% {
+        background: cyan;
+        box-shadow: 0 -20px 100px, 0 0 2px, 0 0 1em cyan, 0 0 0.5em cyan, 0 0 0.1em cyan;
+    }
+    25%,75% {
+        background: deeppink;
+        box-shadow: 0 -20px 100px, 0 0 2px, 0 0 1em deeppink, 0 0 0.5em deeppink, 0 0 0.1em deeppink;
+    }
+}
+
+@keyframes gombAtmenet {
+    0%, 50%, 100% {
+        background-color: cyan;
+        box-shadow: 0 0 2px, 0 0 1em cyan, 0 0 0.5em cyan, 0 0 0.1em cyan;
+    }
+    25%, 75% {
+        background-color: deeppink;
+        box-shadow: 0 0 2px, 0 0 1em deeppink, 0 0 0.5em deeppink, 0 0 0.1em deeppink;
+    }
+}
+
+
+@keyframes fejlecAtmenet {
+    0%,50%,100% {
+        color: deeppink;
+        text-shadow: 0 -20px 100px, 0 0 2px, 0 0 1em deeppink, 0 0 0.5em deeppink, 0 0 0.1em deeppink;
+    }
+    25%,75% {
+        color: cyan;
+        text-shadow: 0 -20px 100px, 0 0 2px, 0 0 1em cyan, 0 0 0.5em cyan, 0 0 0.1em cyan;
+    }
+}
+@keyframes szovegAtmenet{
+    0%,50%,100% {
+        color: deeppink;
+
+    }
+    25%,75% {
+        color: cyan;
+    }
+}
+
+
+#fejlec_csik{
+    width: 100%;
+    height: 5px;
+    margin-top: 15px;
+    position: relative;
+    animation: csikAtmenet 10s infinite alternate;
+}
+
+.hamburger {
+    visibility: hidden;
+    font-size: 24px;
+    width: auto;
+    cursor: pointer;
+    display: inline-block;
+    animation: fejlecAtmenet 10s infinite alternate;
+}
+main {
+    min-height: 80vh;
+}
+main::after{
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.4) /*rgba(18, 18, 61, 0.4)*/;
+    z-index: -1;
+}
+
+.kosar{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.kosar_lathatatlan{
+    display: none;
+}
+
+#email_megadas{
+    color:white;
+    z-index: 1;
+    border: 2px solid rgba(141, 141, 141, 0.4);
+    background-color: rgba(30, 30, 30, 0.6);
+    text-align: center;
+    margin-top: 4cm;
+    padding: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+#email_form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.email_input{
+    height: 25px;
+    width: 250px;
+    border-radius: 25px;
+    font-size:20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#adatok {
+    display: flex;
+    flex-direction: column;
+}
+
+#panel {
+    color: white;
+    z-index: 1;
+    border: 2px solid rgba(141, 141, 141, 0.4);
+    background-color: rgba(30, 30, 30, 0.6);
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    margin-top: 4cm;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5cm;
+}
+#form_valaszok{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.tallozas{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90% !important;
+    border: 2px solid rgba(141, 141, 141, 0.4);
+    background-color: rgba(30, 30, 30, 0.6);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.tallozas_termek{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+}
+
+.delete_gomb{
+    margin-top: 1em;
+    background-color: cyan;
+    border-radius: 25px;
+    border: none;
+    padding: 12px;
+    animation: gombAtmenet 10s infinite alternate;
+}
+
+a{
+    text-decoration: none
+}
+
+.gombok{
+    text-decoration: none;
+    border-radius: 25px;
+    color:white;
+}
+.gombok:hover{
+    color:black;
+    background-color: cyan;
+    border-radius: 25px;
+    border: none;
+    padding: 5px;
+    animation: gombAtmenet 10s infinite alternate;
+    transition: 0.4s;
+}
+
+.termek_gombok{
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 25px;
+    color:white;
+    margin-bottom: 0;
+}
+.termek_gombok:hover{
+    color:black;
+    background-color: cyan;
+    border-radius: 25px;
+    border: none;
+    padding: 5px;
+    animation: gombAtmenet 10s infinite alternate;
+    transition: 0.4s;
+    margin-bottom: 0;
+}
+
+
+.submit_gomb {
+    background-color: cyan;
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 40px;
+    width: 70%;
+    border: none;
+    font-size: 25px;
+    animation: gombAtmenet 10s infinite alternate;
+}
+.vasarlas_gomb {
+    display: block;
+    background-color: cyan;
+    border-radius: 25px;
+    padding: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+    color: black !important;
+    animation: gombAtmenet 10s infinite alternate;
+}
+
+.termekek_neve{
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: cyan;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    animation: gombAtmenet 10s infinite alternate;
+}
+
+input {
+    margin: 10px;
+    padding: 2.5px;
+}
+
+/*Footer*/
+footer{
+    color: white;
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    border: 2px solid rgba(141, 141, 141, 0.4);
+    border-bottom: none;
+    border-radius: 25px 25px 0 0;
+    background-color: rgba(30, 30, 30, 0.6);
+    padding: 20px;
+    margin-top: 2.5cm;
+}
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#footercontainer p {
+    margin: 0;
+}
+
+#footercontainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footercontainer ul li {
+    display: inline-block;
+}
+
+
+
+@media only screen and (max-width: 1180px){
+    #fejlec {
+        padding-left: 5px;
+        padding-right: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #termek_kep_lehetosegek_megjel{
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        width: 50%;
+    }
+    #termek_tablazat {
+        margin-top: 2.5cm;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%
+    }
+
+    #logo{
+        width: 50px;
+        margin-left: 0;
+    }
+
+    #fejlec_cim{
+        animation: fejlecAtmenet 10s infinite alternate;
+        font-size: 35px;
+    }
+
+    .hamburger {
+        color: white;
+        visibility: visible;
+        font-size: 30px;
+        width: auto;
+        cursor: pointer;
+        display: inline-block;
+        animation: fejlecAtmenet 10s infinite alternate;
+    }
+
+    #fejlec_csik{
+        width: 100%;
+        height: 10px;
+        margin-top: 10px;
+        position: relative;
+        animation: csikAtmenet 10s infinite alternate;
+    }
+    .submit_gomb {
+        background-color: cyan;
+        border-radius: 25px;
+        padding: 10px;
+        margin-bottom: 40px;
+        width: 70%;
+        border: none;
+        animation: gombAtmenet 10s infinite alternate;
+    }
+    #panel{
+        width: auto;
+    }
+    #form_valaszok{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .termekek {
+        border: 2px solid rgba(141, 141, 141, 0.4);
+        border-radius: 25px;
+        background-color: rgba(30, 30, 30, 0.6);
+        color: white;
+        margin-top: 2cm;
+        padding: 20px;
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .kosar_adatok{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .termek_megjelenites {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .fooldal_termek_megjelenites {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        width: 100%;
+    }
+
+    .adatok{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .termek_kep {
+        border-radius: 25px;
+        border:2px solid rgba(141, 141, 141, 0.4);
+        height: 100%;
+        width: 100%;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .tallozas{
+        margin-top: 2cm;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90% !important;
+        border: 2px solid rgba(141, 141, 141, 0.4);
+        background-color: rgba(30, 30, 30, 0.6);
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+
+    .termekek-kosar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .adatok{
+        margin-block-start: 20px;
+        margin-block-end: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #termek_kep_lehetosegek_megjel{
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        width: 90%;
+    }
+
+    .termek_adatok{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-block-end: 20px;
+        margin-block-start: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    #meretek{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+    .kosar_termek_adatok{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-block-end: 20px;
+        margin-block-start: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+/*Ikon*/
+
+#ikon_div{
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    animation: szovegAtmenet 10s infinite alternate;
+}
+
+.nav-link{
+    margin-top: 10px;
+}
+
+.nav-link:hover{
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+@keyframes float_ki {
+    0% {
+        transform: translatex(0);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        margin-top: 2cm;
+        padding: 10px;
+        font-size: 20px;
+    }
+    100% {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        margin-top: 2cm;
+        padding: 10px;
+        font-size: 20px;
+        transform: translatex(8cm);
+    }
+}
+
+@keyframes float_be {
+    0% {
+        transform: translatex(8cm);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+
+#ikon{
+    font-size: 30px;
+}
+
+#login{
+    display: none;
+    animation: float_ki 1s;
+}
+
+#login_lathato {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    margin-top: 2cm;
+    padding: 10px;
+    font-size: 20px;
+    animation: float_be 1s;
+}
+
+#navbarDropdown{
+    font-size: 20px;
+}
+
+/*Csillag animáció*/
+:root {
+    --twinkle-duration: 6s;
+}
+.csillag-wrapper {
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+.csillagok {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+}
+.csillagok:nth-child(2) {
+    animation-delay: calc(var(--twinkle-duration) * -0.33);
+}
+.csillagok:nth-child(3) {
+    animation-delay: calc(var(--twinkle-duration) * -0.66);
+}
+@keyframes twinkle {
+    25% {
+        opacity: 0;
+    }
+}
+.star {
+    fill: #fff;
+}
+.star:nth-child(3n) {
+    opacity: 0.8;
+}
+.star:nth-child(7n) {
+    opacity: 0.6;
+}
+.star:nth-child(13n) {
+    opacity: 0.4;
+}
+.star:nth-child(19n) {
+    opacity: 0.2;
+}

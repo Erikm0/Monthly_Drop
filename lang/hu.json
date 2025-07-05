@@ -1,0 +1,19 @@
+{
+    "Register": "Regisztráció",
+    "Name": "Név:",
+    "Confirm Password": "Jelszó megerősítése:",
+    "Login": "Bejelentkezés",
+    "This is where you can Login": "Itt tudsz Bejelentkezni",
+    "Email Address": "Email:",
+    "Password": "Jelszó:",
+    "Remember Me": "Maradjak Bejelentkezve",
+    "Forgot Your Password?": "Elfelejtetted a jelszavad?",
+    "Basket": "Kosarad",
+    "Logout": "Kijelentkezés",
+    "Products Name": "Neve",
+    "Products Price": "Ára",
+    "Products Amount": "Mennyiség",
+    "Products Size": "Mérete",
+    "Delete": "Törlés",
+    "Buy Now": "Vásárlás"
+}
